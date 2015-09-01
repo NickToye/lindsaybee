@@ -1,0 +1,34 @@
+{% block content %}
+<!-- TODO: Check markup -->
+<!-- TODO: Style page -->
+	<main>
+		{% include "banners" %}
+		<section class="cta">
+			<article class="cta__box cta__handmade-ranges">
+				<h1>Handmade Ranges</h1>
+			</article>
+			<div class="cta__grid">
+				<article class="cta__box cta__gifts-cards">
+					<h1>Gifts &amp; Cards</h1>
+				</article>
+				<article class="cta__box cta__bespoke-service">
+					<h1>Bespoke Service</h1>
+				</article>
+				<article class="cta__box cta__about">
+					<h1>About</h1>
+				</article>
+				<article class="cta__box cta__contact">
+					<h1>Get In Touch</h1>
+				</article>
+			</div>
+		</section>
+		<section class="products products--featured">
+			<h1>Featured Products</h1>
+			{% include "/store/product-partial" %}
+			{% include "/store/product-partial" %}
+			{% include "/store/product-partial" %}
+			{% include "/store/product-partial" %}
+		</section>
+
+	</main>
+{% endblock %}

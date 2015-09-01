@@ -1,0 +1,39 @@
+// Aside
+// ---------------------------
+// styles for <aside>
+
+aside {
+
+	body.split & {
+		@include gs-media(t,min) {
+			@include gs-span(d,7,12);
+		}
+	}
+	body.product & {
+		clear: both;
+		@include gs-span(m,all);
+		@include gs-media(t,min) {
+			@include gs-span(d,1,6);
+		}
+	}
+	body.basket & {
+		clear: both;
+		@include gs-span(m,all);
+		@include gs-media(t,min) {
+			clear: none;
+			@include gs-span(d,10,12);
+		}
+	}
+	ul.list-grid {
+		li {
+			margin-bottom: rem($rhythm-unit);
+			&:nth-child(odd) {
+				@include gs-span(d,1,6,(1,12));
+				clear: both;
+			}
+			&:nth-child(even) {
+				@include gs-span(d,7,12,(1,12));
+			}
+		}
+	}
+}

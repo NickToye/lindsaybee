@@ -1,0 +1,11 @@
+// Section
+// ---------------------------
+// styles for <section>
+
+section {
+	clear: both;
+	margin-bottom: rem($rhythm-unit)*2;
+	header {
+		margin-bottom: rem($rhythm-unit);
+	}
+}

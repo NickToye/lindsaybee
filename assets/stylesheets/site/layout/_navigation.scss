@@ -1,0 +1,24 @@
+// Navigation
+// ---------------------------
+// styles for <nav>
+
+nav.navbar--main {
+	overflow:hidden;
+	.navbar__collapse {
+		position: relative;
+		float: left;
+		left: 50%;
+	}
+	.nav {
+		position: relative;
+		left: -50%;
+		&--links {
+			li a {
+				@include font-size($navbar-font-size,$line-height:false,$margin-bottom: false);
+				font-weight: $normal;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+

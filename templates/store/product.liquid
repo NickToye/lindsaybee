@@ -1,0 +1,38 @@
+{% layout "product" %}
+{% block content %}
+<!-- TODO: Check markup -->
+<!-- TODO: Style page -->
+	<main>
+		<aside class="images">
+			<figure class="main-image">
+				<img class="img img--thumbnail" src="{{ "600x400" | placeholder }}" alt="...">
+			</figure>
+			<ul class="list-grid">
+				<li><a href="#"><figure><img class="img img--thumbnail" src="{{ "450x450" | placeholder }}" alt="..."></figure></a></li>
+				<li><a href="#"><figure><img class="img img--thumbnail" src="{{ "450x450" | placeholder }}" alt="..."></figure></a></li>
+				<li><a href="#"><figure><img class="img img--thumbnail" src="{{ "450x450" | placeholder }}" alt="..."></figure></a></li>
+				<li><a href="#"><figure><img class="img img--thumbnail" src="{{ "450x450" | placeholder }}" alt="..."></figure></a></li>
+				<li><a href="#"><figure><img class="img img--thumbnail" src="{{ "450x450" | placeholder }}" alt="..."></figure></a></li>
+				<li><a href="#"><figure><img class="img img--thumbnail" src="{{ "450x450" | placeholder }}" alt="..."></figure></a></li>
+			</ul>
+			<section>
+				<h2>Product Information</h2>
+				<p>Category</p>
+				<p>Other stuff</p>
+			</section>
+		</aside>
+		<div class="product">
+			<section class="product-details">
+				<h1>Product Name</h1>
+				<p>&pound;XX.XX</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+				<p>Options here</p>
+				<input class="btn btn--primary" type="submit" value="Add to Basket" name="">
+			</section>
+		</div>
+	</main>
+
+{% endblock %}
+
+

@@ -1,0 +1,12 @@
+// Account Bar
+// ---------------------------
+// styles for the shop account bar
+
+ul.account-bar {
+	li {
+		@include zero-list;
+		@include font-size($font-size-small,$line-height:false,$margin-bottom: false);
+		text-transform: uppercase;
+		padding-left: 10px;
+	}
+}

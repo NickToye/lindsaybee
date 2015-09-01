@@ -1,0 +1,27 @@
+// Footer
+// ---------------------------
+// styles for <footer>
+
+footer {
+	height: rem($rhythm-unit)*6;
+	small {
+		@include gs-span(m,all);
+		@include gs-media(t,min) {
+			clear: none;
+			width: auto;
+		}
+
+		&.pixels {
+
+			img {
+				height: 32px;
+			}
+		}
+		text-align: center;
+	}
+
+	.wrapper {
+		background: none;
+		box-shadow: none;
+	}
+}

@@ -1,0 +1,122 @@
+{% layout "basket" %}
+{% block content %}
+<!-- TODO: Check markup -->
+<!-- TODO: Style page -->
+	<main>
+		<form class="form form--inline" action="basket.html" method="" accept-charset="utf-8">
+			<section class="basket">
+				<header>
+					<h1>Shopping Bag</h1>
+					<p>You currently have 2 item(s) in your bag.</p>
+				</header>
+				<!-- TODO: Add in remove column -->
+				<!-- TODO: change basket to table-basket -->
+				<table class="table table--condensed table--basket">
+				<thead>
+					<tr>
+						<th class="col_product">Product</th>
+						<th class="col_qty">Qty</th>
+						<th class="col_price">Price</th>
+						<th class="col_discount">Discount</th>
+						<th class="col_total text-right">Total</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="col_product">
+								<figure>
+									<!-- @placeholder 200x200 -->
+								</figure>
+								<div class="product_info">
+									<h2><a href="#">Full Range</a></h2>
+									<ul class="list-unstyled">
+										<li>Details...</li>
+										<li>Details...</li>
+										<li>Details...</li>
+									</ul>
+								</div>
+							</td>
+						<td class="col_qty controls">
+							<input type="text" class="controls--control small" name="item_quantity[{{ item.key }}]" value="1" />
+						</td>
+						<td class="col_price">
+								<span class="single-price">&pound;39.99</span>
+							</td>
+						<td class="col_discount">
+								<span class="discount">&pound;0.00</span>
+							</td>
+						<td class="col_total text-right">
+								<span class="total-price">&pound;39.99</span>
+							</td>
+					</tr>
+					<tr>
+						<td class="col_product">
+								<figure>
+									<!-- @placeholder 200x200 -->
+								</figure>
+								<div class="product_info">
+									<h2><a href="#">Full Range</a></h2>
+									<ul class="list-unstyled">
+										<li>Details...</li>
+										<li>Details...</li>
+										<li>Details...</li>
+									</ul>
+								</div>
+							</td>
+						<td class="col_qty controls">
+							<input type="text" class="controls--control small" name="item_quantity[{{ item.key }}]" value="1" />
+						</td>
+						<td class="col_price">
+								<span class="single-price">&pound;39.99</span>
+							</td>
+						<td class="col_discount">
+								<span class="discount">&pound;0.00</span>
+							</td>
+						<td class="col_total text-right">
+								<span class="total-price">&pound;39.99</span>
+							</td>
+					</tr>
+				</tbody>
+			</table>
+
+				<!-- TODO: Change this to use BEM -->
+				<!-- TODO: Change to pull-left and pull-right -->
+				<footer class="basket-footer">
+					<div class="action-buttons">
+						<button class="btn btn--primary" data-ajax-handler="shop:cart" data-ajax-update="#cart-content=shop-cart-content, #mini-cart=shop-minicart">
+							<i class="fa fa-refresh"></i>Update cart
+						</button>
+						<a class="btn btn--success" href="/store/checkout-login">Checkout <i class="fa fa-check"></i></a>
+						<a href="/store/shop" class="continue-shopping">
+							<i class="fa fa-angle-left"></i> &nbsp; Continue shopping
+						</a>
+					</div>
+				</footer>
+			</section>
+			<aside class="order-summary">
+				<section class="order-totals">
+					<header>
+						<h1>Order Totals</h1>
+						<p>Shipping costs and taxes will be evaluated during checkout.</p>
+					</header>
+					<ul class="price-list">
+						<li>Subtotal: <strong>&pound;39.99</strong></li>
+						<!-- TODO: change class to Primary and add Primary colour in variables.scss -->
+						<li class="important">Total: <strong>&pound;39.99</strong></li>
+					</ul>
+				</section>
+				<section class="coupon-code">
+					<h1>Coupon Code</h1>
+					<p>Enter your coupon here to redeem.</p>
+					<fieldset class="controls">
+						<input class="controls--control" type="text" name="coupon-code" id="coupon-code" placeholder="Coupon Code...">
+					</fieldset>
+					<fieldset class="controls">
+						<button type="submit" class="btn btn--primary" value="Apple" name="">Apply</button>
+					</fieldset>
+				</section>
+			</aside>
+		</form>
+	</main>
+
+{% endblock %}

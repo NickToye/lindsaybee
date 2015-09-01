@@ -1,0 +1,86 @@
+// Products
+// ---------------------------
+// styles for product pages & elements
+.products {
+	@include clearfix;
+
+	&--featured {
+		@include gs-span(m,all);
+		.products__product {
+			margin-bottom: gs-adjust(m, gs-gutter(m), (1,1),true);
+			@include gs-media(t,min) {
+				&:nth-child(odd) { @include gs-span(t,1,2); }
+				&:nth-child(even) { @include gs-span(t,3,4); clear: both;}
+				margin-bottom: gs-adjust(t, gs-gutter(t), (1,4),true);
+			}
+			@include gs-media(d,min) {
+				clear: none !important;
+				&:nth-child(4n+1) { @include gs-span(d,1,3);}
+				&:nth-child(4n+2) { @include gs-span(d,4,6); clear: none;}
+				&:nth-child(4n+3) { @include gs-span(d,7,9);}
+				&:nth-child(4n+4) { @include gs-span(d,10,12);}
+			}
+		}
+	}
+	&__product {
+		text-align: center;
+		figure {
+			margin-bottom: rem($rhythm-unit);
+		}
+		&__details {
+
+			margin-bottom: rem($rhythm-unit);
+			p {
+				@include font-size(15,$line-height:true,$margin-bottom: false);
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+// Product Table
+.table--products {
+	margin-bottom: rem($rhythm-unit);
+	> tbody > tr > td {
+		border: 0;
+		padding: 0;
+		&.controls {
+			text-align: right;
+			float: right;
+			margin: 0;
+		}
+	}
+
+	input.controls--control {
+		margin-bottom: 10px;
+		height: rem($input-height-base)/1.5;
+		&.small {
+			width: 50px;
+			text-align: center;
+			padding: 0;
+		}
+	}
+}
+
+// Product page
+main {
+	aside.images {
+		figure.main-image {
+			margin-bottom: rem($rhythm-unit);
+		}
+	}
+	.product {
+		@include gs-span(m,all);
+		@include gs-media(t,min) {
+			clear: none;
+			@include gs-span(d,7,12);
+		}
+	}
+	.basket {
+		@include gs-span(m,all);
+		@include gs-media(t,min) {
+
+			@include gs-span(d,1,9);
+		}
+	}
+}

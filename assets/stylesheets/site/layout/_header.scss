@@ -1,0 +1,54 @@
+// Header
+// ---------------------------
+// styles for <header>
+
+header {
+	position: relative;
+	@include gs-span(d,all);
+// 	margin-bottom: rem($rhythm-unit);
+	p.tag {
+		background: $brand-tertiary;
+		color: $white;
+		position: relative;
+		text: {
+			align: center;
+			transform: uppercase;
+		}
+		@include font-size($font-size-small, $line-height: true, $margin-bottom: true);
+		font-weight: $semi-bold;
+		padding: rem($rhythm-unit);
+		margin-bottom: rem($rhythm-unit)*2;
+		i.fa {
+			color: $white;
+			@include font-size($font-size-extra-small,$line-height:false,$margin-bottom:false);
+			&:nth-child(1) {
+				padding-right: 5px;
+			}
+			&:nth-child(2) {
+				padding-left: 5px;
+			}
+		}
+		&:before {
+			content: " ";
+			@include absolute-position(0,inherit,inherit,0);
+			width: 12px;
+			height: 36px;
+			background: url(../img/banner-ends.png) no-repeat top left;
+		}
+		&:after {
+			content: " ";
+			@include absolute-position(0,0,inherit,inherit);
+			width: 12px;
+			height: 36px;
+			background: url(../img/banner-ends.png) no-repeat bottom right;
+		}
+	}
+	a.logo {
+		display: block;
+		text-align: center;
+		margin-bottom: rem($rhythm-unit)*2;
+	}
+	.account-social {
+		@include absolute-position(45px,0,inherit,inherit);
+	}
+}

@@ -1,0 +1,67 @@
+// Basket
+// ---------------------------
+// styles for the basket page & mini basket
+
+section.basket {
+	header {
+
+	}
+	table.table--basket {
+		> tbody > tr > td {
+			padding: rem($rhythm-unit)/2;
+			border-top: 1px solid $table-border-color;
+			&.controls {
+				display: table-cell;
+				vertical-align: top;
+			}
+		}
+		input.controls--control {
+			margin-bottom: 10px;
+			height: rem($input-height-base)/1.5;
+			&.small {
+				width: 50px;
+				text-align: center;
+				padding: 0;
+			}
+		}
+	}
+	.product_info {
+		li {
+			@include font-size($p,$line-height: true, $margin-bottom: true);
+		}
+	}
+	footer {
+		clear: both;
+		background: none;
+		border-top: 1px solid $table-border-color;
+		padding-top: rem($rhythm-unit);
+		.continue-shopping {
+			clear: both;
+			display: block;
+			text-align: right;
+		}
+		.action-buttons {
+			float: right;
+		}
+	}
+	.action-buttons .btn {
+		margin-bottom: rem($rhythm-unit);
+		&.btn--success i.fa {
+			padding-right: 0;
+			padding-left:  rem($rhythm-unit);
+		}
+	}
+}
+
+aside.order-summary {
+	fieldset.controls {
+		width: 100%;
+		margin-bottom: rem($rhythm-unit);
+	}
+}
+
+li#mini-cart {
+	small {
+		color: $gray-lighter;
+	}
+}

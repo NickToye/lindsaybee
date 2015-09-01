@@ -1,0 +1,19 @@
+// Maintenance
+// ---------------------------
+// styles for maintenance pages & elements
+
+body.maintenance {
+	padding-top: rem($rhythm-unit)*4;
+	.wrapper {
+		max-width: 50%;
+	}
+	figure.maintenance-logo {
+		@include gs-media(t,min) {
+			@include gs-span(d,5,8);
+		}
+		margin-bottom: rem($rhythm-unit)*4;
+	}
+	article.maintenance {
+		text-align: center;
+	}
+}
